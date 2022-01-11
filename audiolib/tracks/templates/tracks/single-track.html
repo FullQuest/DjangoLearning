@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>{{track.title}}</h1>  
+<hr>
+
+
+Genres: 
+{% for genre in track.genres.all %}
+<span = style="border:1px solid grey">{{genre}}</span>
+{% endfor %}
+<hr>
+
+
+<p>{{track.description}}</p>
+
+{% endblock content %}

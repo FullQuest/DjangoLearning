@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<!-- {% if number > 10 %}
+    <p>Number is greater than 10</p>
+
+{% elif number == 10 %}
+    <p>Number is exactly 10</p>
+
+{% else %}
+    <p>Number is less than 10</p>
+{% endif %} -->
+
+<h1>Projects</h1>
+
+<table border="2px">
+    <tr>
+
+        <th>ID</th>
+        <th>Project</th>
+        <th>Prositive votes</th>
+        <th>Ratio</th>
+        <th>Date created</th>
+    </tr>
+
+    {% for project in projects %}
+        <tr>
+            <td>{{project.id}}</td>
+            <td><a href="{% url 'project' project.id %}">{{project.title}}</a></td>
+            <td>{{project.vote_ratio}}%</td>
+            <td>{{project.vote_total}}</td>
+            <td>{{project.created}}</td>
+        </tr>
+    {% endfor %}
+
+    
+</table>
+
+<!-- <ul>
+    {% for project in projects %}
+        <li>Title: <a href="{% url 'project' project.id %}">{{project.title}}</a> --- {{project.created}}</li>
+    {% endfor %}
+</ul> -->
+
+{% endblock content %}

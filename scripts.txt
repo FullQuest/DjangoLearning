@@ -1,0 +1,24 @@
+After all:
+kickstarts\scripts\activate
+kickstarts\scripts\deactivate
+
+
+Run server
+python manage.py runserver
+
+run shell:
+python manage.py shell
+
+Create superuser:
+python manage.py createsuperuser
+
+create app
+python manage.py startapp projects
+
+Scripts managery:
+Activate:
+Set-ExecutionPolicy RemoteSigned
+Deactivate:
+Set-ExecutionPolicy RemoteSigned
+On err:
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser

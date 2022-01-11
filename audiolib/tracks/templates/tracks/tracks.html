@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1>Tracks</h1>
+
+<table border="2px">
+
+    <tr>
+        <th>Authors</th>
+        <th>Tracks</th>
+        <th>Genere</th>
+        <th>Listen</th>
+    </tr>
+
+    {% for track in tracks %}
+        <tr>
+            <td>{{track.author}}</td>
+            <td><a href="{% url 'track' track.id %}">{{track.title}}</a></td>
+            <td>{{track.genres}}</td>
+            <td><a href={{track.demo_link}} target="_blank">Link</a></td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock content %}
