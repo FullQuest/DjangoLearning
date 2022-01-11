@@ -27,6 +27,7 @@ class Artist(models.Model):
     date_of_birth = models.DateField(blank=True, null=True)
     bio = models.CharField(max_length=5000, blank=True)
     added = models.DateTimeField(auto_now_add=True)
+    tracks = models.ManyToManyField('Track', blank=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True, 
                           primary_key=True, editable=False)
 

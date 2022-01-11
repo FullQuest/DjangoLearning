@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Track, Artist
+from .forms import TrackForm
 
 
 def tracks(request):
@@ -13,9 +14,13 @@ def tracks(request):
 
 
 def track(request, pk):
-
     track_obj = Track.objects.get(id=pk)  # pylint: disable=maybe-no-member
 
     return render(request, 'tracks/single-track.html',
                   {'track': track_obj})
 
+
+def add_track(request):
+    form = TrackForm()
+    context = {'form': form}
+    return render(request, "tracks/track_form.html", context)

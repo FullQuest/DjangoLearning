@@ -22,3 +22,4 @@ Deactivate:
 Set-ExecutionPolicy RemoteSigned
 On err:
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+https://github.com/divanov11/Django-2021
