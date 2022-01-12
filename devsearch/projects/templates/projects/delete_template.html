@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+<h1>Delete "{{object}}" object?</h1>
+
+<tabe border='2px'>
+    <tr>
+        <td>
+            <form action=""></form>
+                {% csrf_token %}
+                
+                <a href="{% url 'projects' %}"><button>Cancel</button></a>
+
+            </form>
+        </td>
+        
+        <td>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="submit" value='Confirm'/>
+        </form>
+        </td>
+    </tr>
+</tabe>
+
+{% endblock %}
