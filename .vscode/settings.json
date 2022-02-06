@@ -1,11 +1,13 @@
 {
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": false,
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
 
     "python.linting.flake8Enabled": true,
-    "python.linting.mypyEnabled": true,
+    "python.linting.mypyEnabled": false,
     "python.autoComplete.showAdvancedMembers": true,
     "python.analysis.autoImportCompletions": false,
     "python.analysis.diagnosticMode": "openFilesOnly",
     "python.analysis.autoSearchPaths": true,
+    "python.linting.banditEnabled": false,
+    "python.linting.prospectorEnabled": false,
 }
